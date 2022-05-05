@@ -1,0 +1,43 @@
+# depslib dependency file v1.0
+1651746633 source:/home/roman/CodeBlocks_projects/AUS_semester_work/main.cpp
+	<iostream>
+
+1651756993 source:/home/roman/CodeBlocks_projects/AUS_semester_work/criteria/criterion.h
+
+1651760138 source:/home/roman/CodeBlocks_projects/AUS_semester_work/ground_units/ground_unit.h
+	<string>
+
+1651760581 source:/home/roman/CodeBlocks_projects/AUS_semester_work/ground_units/specified_ground_unit.h
+	"ground_unit.h"
+
+1651760138 /home/roman/CodeBlocks_projects/AUS_semester_work/ground_units/ground_unit.h
+	<string>
+
+1651760619 source:/home/roman/CodeBlocks_projects/AUS_semester_work/ground_units/village.h
+	"specified_ground_unit.h"
+
+1651760581 /home/roman/CodeBlocks_projects/AUS_semester_work/ground_units/specified_ground_unit.h
+	"ground_unit.h"
+
+1651760600 source:/home/roman/CodeBlocks_projects/AUS_semester_work/ground_units/district.h
+	"specified_ground_unit.h"
+
+1651760619 source:/home/roman/CodeBlocks_projects/AUS_semester_work/ground_units/region.h
+	"specified_ground_unit.h"
+
+1651760608 source:/home/roman/CodeBlocks_projects/AUS_semester_work/criteria/criterion_specified_ground_unit.h
+	"criterion.h"
+	"../ground_units/specified_ground_unit.h"
+
+1651756993 /home/roman/CodeBlocks_projects/AUS_semester_work/criteria/criterion.h
+
+1651760612 source:/home/roman/CodeBlocks_projects/AUS_semester_work/criteria/criterion_specified_ground_unit_name.h
+	"criterion_specified_ground_unit.h"
+
+1651760608 /home/roman/CodeBlocks_projects/AUS_semester_work/criteria/criterion_specified_ground_unit.h
+	"criterion.h"
+	"../ground_units/specified_ground_unit.h"
+
+1651760616 source:/home/roman/CodeBlocks_projects/AUS_semester_work/criteria/criterion_specified_ground_unit_type.h
+	"criterion_specified_ground_unit.h"
+
