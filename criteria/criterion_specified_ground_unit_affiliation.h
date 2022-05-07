@@ -1,28 +1,26 @@
-#include "criterion.h"
+#include "criterion_specified_ground_unit.h"
+#include "../ground_units/superior_ground_unit.h"
 
 
 namespace criteria
 {
-/// <summary> Kriterium pre prislusnost. </summary>
-template <typename ObjectType>
-class CriterionGroundUnitAffiliation : public Criterion<ObjectType, bool>
+/// <summary> Kriterium pre prislusnost do vyssieho celku. </summary>
+class CriterionSpecifiedGroundUnitAffiliation : public CriterionSpecifiedGroundUnit<bool>
 {
 public:
-    CriterionGroundUnitAffiliation(const ObjectType& higherGround);
-    bool evaluate(const ObjectType& unit) override;
+    CriterionSpecifiedGroundUnitAffiliation(const ground_units::SuperiorGroundUnit& unit);
+    bool evaluate(const ground_units::SpecifiedGroundUnit& unit) override;
 private:
-    ObjectType& higherGround_;
+    const ground_units::SuperiorGroundUnit& superiorUnit_;
 };
 
-template<typename ObjectType>
-inline CriterionGroundUnitAffiliation<ObjectType>::CriterionGroundUnitAffiliation(const ObjectType& higherGround) :
-higherGround_(higherGround)
+CriterionSpecifiedGroundUnitAffiliation::CriterionSpecifiedGroundUnitAffiliation(const ground_units::SuperiorGroundUnit& unit) :
+superiorUnit_(unit)
 {
 }
 
-template <typename ObjectType>
-inline bool CriterionGroundUnitAffiliation<ObjectType>::evaluate(const ObjectType& unit)
+inline bool CriterionSpecifiedGroundUnitAffiliation::evaluate(const ground_units::SpecifiedGroundUnit& unit)
 {
-    return unit.getType();
+    return unit.isAffiliated(superiorUnit_);
 }
 }

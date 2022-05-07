@@ -1,9 +1,11 @@
 #include <iostream>
 
+#include "workers/data_loader.h"
+
 using namespace std;
 
 int main()
 {
-    cout << "Hello world!" << endl;
+    loadUnits("obce.csv");
     return 0;
 }

@@ -7,11 +7,11 @@ namespace criteria
 class CriterionSpecifiedGroundUnitName : public CriterionSpecifiedGroundUnit<std::wstring>
 {
 public:
-    std::wstring evaluate(const ground_units::SpecifiedGroudUnit& unit) override;
+    std::wstring evaluate(const ground_units::SpecifiedGroundUnit& unit) override;
 };
 
-inline std::wstring CriterionSpecifiedGroundUnitName::evaluate(const ground_units::SpecifiedGroudUnit& unit)
+inline std::wstring CriterionSpecifiedGroundUnitName::evaluate(const ground_units::SpecifiedGroundUnit& unit)
 {
-    return unit.getOfficialName();
+    return unit.getName();
 }
 }

@@ -1,6 +1,17 @@
-#ifndef CRITERION_SPECIFIED_GROUND_UNIT_EDUCATED_COUNT_H_INCLUDED
-#define CRITERION_SPECIFIED_GROUND_UNIT_EDUCATED_COUNT_H_INCLUDED
+#include "criterion_specified_ground_unit.h"
 
 
+namespace criteria
+{
+/// <summary> Kriterium pre vzdelanie. </summary>
+class CriterionSpecifiedGroundUnitEducation : public CriterionSpecifiedGroundUnit<int>
+{
+public:
+    std::wstring evaluate(const ground_units::SpecifiedGroundUnit& unit) override;
+};
 
-#endif // CRITERION_SPECIFIED_GROUND_UNIT_EDUCATED_COUNT_H_INCLUDED
+inline std::wstring CriterionSpecifiedGroundUnitName::evaluate(const ground_units::SpecifiedGroundUnit& unit)
+{
+    return unit.getName();
+}
+}

@@ -4,13 +4,13 @@
 namespace criteria
 {
 /// <summary> Kriterium pre typy. </summary>
-class CriterionSpecifiedGroundUnitType : public CriterionSpecifiedGroundUnit<std::string>
+class CriterionSpecifiedGroundUnitType : public CriterionSpecifiedGroundUnit<Type>
 {
 public:
-    std::string evaluate(const ground_units::SpecifiedGroudUnit& unit) override;
+    Type evaluate(const ground_units::SpecifiedGroundUnit& unit) override;
 };
 
-inline std::string CriterionSpecifiedGroundUnitType::evaluate(const ground_units::SpecifiedGroudUnit& unit)
+inline Type CriterionSpecifiedGroundUnitType::evaluate(const ground_units::SpecifiedGroundUnit& unit)
 {
     return unit.getType();
 }

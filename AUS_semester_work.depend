@@ -1,22 +1,23 @@
 # depslib dependency file v1.0
-1651746633 source:/home/roman/CodeBlocks_projects/AUS_semester_work/main.cpp
+1651861064 source:/home/roman/CodeBlocks_projects/AUS_semester_work/main.cpp
 	<iostream>
+	"workers/data_loader.h"
 
 1651756993 source:/home/roman/CodeBlocks_projects/AUS_semester_work/criteria/criterion.h
 
-1651760138 source:/home/roman/CodeBlocks_projects/AUS_semester_work/ground_units/ground_unit.h
+1651850571 source:/home/roman/CodeBlocks_projects/AUS_semester_work/ground_units/ground_unit.h
 	<string>
 
-1651760581 source:/home/roman/CodeBlocks_projects/AUS_semester_work/ground_units/specified_ground_unit.h
+1651777511 source:/home/roman/CodeBlocks_projects/AUS_semester_work/ground_units/specified_ground_unit.h
 	"ground_unit.h"
 
-1651760138 /home/roman/CodeBlocks_projects/AUS_semester_work/ground_units/ground_unit.h
+1651850571 /home/roman/CodeBlocks_projects/AUS_semester_work/ground_units/ground_unit.h
 	<string>
 
 1651760619 source:/home/roman/CodeBlocks_projects/AUS_semester_work/ground_units/village.h
 	"specified_ground_unit.h"
 
-1651760581 /home/roman/CodeBlocks_projects/AUS_semester_work/ground_units/specified_ground_unit.h
+1651777511 /home/roman/CodeBlocks_projects/AUS_semester_work/ground_units/specified_ground_unit.h
 	"ground_unit.h"
 
 1651760600 source:/home/roman/CodeBlocks_projects/AUS_semester_work/ground_units/district.h
@@ -25,19 +26,175 @@
 1651760619 source:/home/roman/CodeBlocks_projects/AUS_semester_work/ground_units/region.h
 	"specified_ground_unit.h"
 
-1651760608 source:/home/roman/CodeBlocks_projects/AUS_semester_work/criteria/criterion_specified_ground_unit.h
+1651778344 source:/home/roman/CodeBlocks_projects/AUS_semester_work/criteria/criterion_specified_ground_unit.h
 	"criterion.h"
 	"../ground_units/specified_ground_unit.h"
 
 1651756993 /home/roman/CodeBlocks_projects/AUS_semester_work/criteria/criterion.h
 
-1651760612 source:/home/roman/CodeBlocks_projects/AUS_semester_work/criteria/criterion_specified_ground_unit_name.h
+1651777721 source:/home/roman/CodeBlocks_projects/AUS_semester_work/criteria/criterion_specified_ground_unit_name.h
 	"criterion_specified_ground_unit.h"
 
-1651760608 /home/roman/CodeBlocks_projects/AUS_semester_work/criteria/criterion_specified_ground_unit.h
+1651778344 /home/roman/CodeBlocks_projects/AUS_semester_work/criteria/criterion_specified_ground_unit.h
 	"criterion.h"
 	"../ground_units/specified_ground_unit.h"
 
-1651760616 source:/home/roman/CodeBlocks_projects/AUS_semester_work/criteria/criterion_specified_ground_unit_type.h
+1651777790 source:/home/roman/CodeBlocks_projects/AUS_semester_work/criteria/criterion_specified_ground_unit_type.h
 	"criterion_specified_ground_unit.h"
+
+1651850655 source:/home/roman/CodeBlocks_projects/AUS_semester_work/criteria/criterion_specified_ground_unit_affiliation.h
+	"criterion_specified_ground_unit.h"
+	"../ground_units/superior_ground_unit.h"
+
+1651777550 source:/home/roman/CodeBlocks_projects/AUS_semester_work/ground_units/superior_ground_unit.h
+	"ground_unit.h"
+
+1651777550 /home/roman/CodeBlocks_projects/AUS_semester_work/ground_units/superior_ground_unit.h
+	"ground_unit.h"
+
+1650799786 source:/home/roman/CodeBlocks_projects/AUS_semester_work/structures/list/double_linked_list.h
+	"list.h"
+	"../structure_iterator.h"
+	"../data_item.h"
+	"../utils.h"
+
+1645211754 /home/roman/CodeBlocks_projects/AUS_semester_work/structures/list/list.h
+	"../structure.h"
+	"../structure_iterator.h"
+
+1646146446 /home/roman/CodeBlocks_projects/AUS_semester_work/structures/structure.h
+	<stdexcept>
+
+1646146446 /home/roman/CodeBlocks_projects/AUS_semester_work/structures/structure_iterator.h
+
+1646146446 /home/roman/CodeBlocks_projects/AUS_semester_work/structures/utils.h
+	<string>
+
+1647869058 source:/home/roman/CodeBlocks_projects/AUS_semester_work/structures/array/array.h
+	"../structure.h"
+	"../vector/vector.h"
+	"../utils.h"
+	<stdexcept>
+
+1645211754 /home/roman/CodeBlocks_projects/AUS_semester_work/structures/vector/vector.h
+	"../structure.h"
+	"../types.h"
+
+1648754986 /home/roman/CodeBlocks_projects/AUS_semester_work/structures/types.h
+	<chrono>
+
+1649959945 source:/home/roman/CodeBlocks_projects/AUS_semester_work/structures/list/array_list.h
+	"list.h"
+	"../structure_iterator.h"
+	"../array/array.h"
+
+1647869058 /home/roman/CodeBlocks_projects/AUS_semester_work/structures/array/array.h
+	"../structure.h"
+	"../vector/vector.h"
+	"../utils.h"
+	<stdexcept>
+
+1646146446 /home/roman/CodeBlocks_projects/AUS_semester_work/structures/data_item.h
+
+1646146446 source:/home/roman/CodeBlocks_projects/AUS_semester_work/structures/data_item.h
+
+1651859246 source:/home/roman/CodeBlocks_projects/AUS_semester_work/structures/list/linked_list.h
+	"list.h"
+	"../structure_iterator.h"
+	"../data_item.h"
+	"../utils.h"
+
+1645211754 source:/home/roman/CodeBlocks_projects/AUS_semester_work/structures/list/list.h
+	"../structure.h"
+	"../structure_iterator.h"
+
+1649088003 source:/home/roman/CodeBlocks_projects/AUS_semester_work/structures/structure.cpp
+	"structure.h"
+
+1646146446 source:/home/roman/CodeBlocks_projects/AUS_semester_work/structures/structure.h
+	<stdexcept>
+
+1646146446 source:/home/roman/CodeBlocks_projects/AUS_semester_work/structures/structure_iterator.h
+
+1650975686 source:/home/roman/CodeBlocks_projects/AUS_semester_work/structures/table/sequence_table.h
+	"table.h"
+	"../list/list.h"
+	<stdexcept>
+
+1650911499 /home/roman/CodeBlocks_projects/AUS_semester_work/structures/table/table.h
+	"../data_item.h"
+	"../structure.h"
+	"../structure_iterator.h"
+
+1651577179 source:/home/roman/CodeBlocks_projects/AUS_semester_work/structures/table/sorted_sequence_table.h
+	"../list/array_list.h"
+	"sequence_table.h"
+
+1649959945 /home/roman/CodeBlocks_projects/AUS_semester_work/structures/list/array_list.h
+	"list.h"
+	"../structure_iterator.h"
+	"../array/array.h"
+
+1650975686 /home/roman/CodeBlocks_projects/AUS_semester_work/structures/table/sequence_table.h
+	"table.h"
+	"../list/list.h"
+	<stdexcept>
+
+1645211754 source:/home/roman/CodeBlocks_projects/AUS_semester_work/structures/table/sorting/sort.cpp
+	"sort.h"
+
+1645211754 /home/roman/CodeBlocks_projects/AUS_semester_work/structures/table/sorting/sort.h
+	"../unsorted_sequence_table.h"
+
+1650976054 /home/roman/CodeBlocks_projects/AUS_semester_work/structures/table/unsorted_sequence_table.h
+	"sequence_table.h"
+	"../list/array_list.h"
+	"../utils.h"
+
+1650911499 source:/home/roman/CodeBlocks_projects/AUS_semester_work/structures/table/table.h
+	"../data_item.h"
+	"../structure.h"
+	"../structure_iterator.h"
+
+1650976054 source:/home/roman/CodeBlocks_projects/AUS_semester_work/structures/table/unsorted_sequence_table.h
+	"sequence_table.h"
+	"../list/array_list.h"
+	"../utils.h"
+
+1648754986 source:/home/roman/CodeBlocks_projects/AUS_semester_work/structures/types.h
+	<chrono>
+
+1646146446 source:/home/roman/CodeBlocks_projects/AUS_semester_work/structures/utils.cpp
+	"utils.h"
+	<stdexcept>
+
+1646146446 source:/home/roman/CodeBlocks_projects/AUS_semester_work/structures/utils.h
+	<string>
+
+1649960791 source:/home/roman/CodeBlocks_projects/AUS_semester_work/structures/vector/vector.cpp
+	"vector.h"
+	"../utils.h"
+	<cstdlib>
+	<cstring>
+
+1645211754 source:/home/roman/CodeBlocks_projects/AUS_semester_work/structures/vector/vector.h
+	"../structure.h"
+	"../types.h"
+
+1651869656 /home/roman/CodeBlocks_projects/AUS_semester_work/workers/data_loader.h
+	<iostream>
+	<fstream>
+	<sstream>
+	"../ground_units/ground_unit.h"
+	"../structures/table/sequence_table.h"
+
+1651864291 source:/home/roman/CodeBlocks_projects/AUS_semester_work/workers/data_loader.h
+	<iostream>
+	<fstream>
+	<sstream>
+	"../ground_units/ground_unit.h"
+	"../structures/table/sequence_table.h"
+
+1651869656 source:/home/roman/CodeBlocks_projects/AUS_semester_work/attributes/identification.h
+	<string>
 

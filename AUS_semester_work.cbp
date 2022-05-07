@@ -32,34 +32,109 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="attributes/identification.h">
+			<Option compile="1" />
+		</Unit>
+		<Unit filename="attributes/tag.h">
+			<Option compile="1" />
+		</Unit>
 		<Unit filename="criteria/criterion.h">
 			<Option compile="1" />
 		</Unit>
 		<Unit filename="criteria/criterion_specified_ground_unit.h">
 			<Option compile="1" />
 		</Unit>
+		<Unit filename="criteria/criterion_specified_ground_unit_affiliation.h">
+			<Option compile="1" />
+		</Unit>
+		<Unit filename="criteria/criterion_specified_ground_unit_educated_count.h" />
 		<Unit filename="criteria/criterion_specified_ground_unit_name.h">
 			<Option compile="1" />
 		</Unit>
 		<Unit filename="criteria/criterion_specified_ground_unit_type.h">
 			<Option compile="1" />
 		</Unit>
-		<Unit filename="ground_units/district.h">
-			<Option compile="1" />
-		</Unit>
+		<Unit filename="ground_units/district.h" />
 		<Unit filename="ground_units/ground_unit.h">
 			<Option compile="1" />
 		</Unit>
-		<Unit filename="ground_units/region.h">
-			<Option compile="1" />
-		</Unit>
+		<Unit filename="ground_units/region.h" />
 		<Unit filename="ground_units/specified_ground_unit.h">
 			<Option compile="1" />
 		</Unit>
-		<Unit filename="ground_units/village.h">
+		<Unit filename="ground_units/superior_ground_unit.h">
 			<Option compile="1" />
 		</Unit>
+		<Unit filename="ground_units/village.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="structures/array/array.h">
+			<Option compile="1" />
+		</Unit>
+		<Unit filename="structures/data_item.h">
+			<Option compile="1" />
+		</Unit>
+		<Unit filename="structures/list/array_list.h">
+			<Option compile="1" />
+		</Unit>
+		<Unit filename="structures/list/double_linked_list.h">
+			<Option compile="1" />
+		</Unit>
+		<Unit filename="structures/list/linked_list.h">
+			<Option compile="1" />
+		</Unit>
+		<Unit filename="structures/list/list.h">
+			<Option compile="1" />
+		</Unit>
+		<Unit filename="structures/structure.cpp" />
+		<Unit filename="structures/structure.h">
+			<Option compile="1" />
+		</Unit>
+		<Unit filename="structures/structure_iterator.h">
+			<Option compile="1" />
+		</Unit>
+		<Unit filename="structures/table/hash_table.h">
+			<Option compile="1" />
+		</Unit>
+		<Unit filename="structures/table/linked_table.h">
+			<Option compile="1" />
+		</Unit>
+		<Unit filename="structures/table/sequence_table.h">
+			<Option compile="1" />
+		</Unit>
+		<Unit filename="structures/table/sorted_sequence_table.h">
+			<Option compile="1" />
+		</Unit>
+		<Unit filename="structures/table/sorting/bubble_sort.h" />
+		<Unit filename="structures/table/sorting/heap_sort.h" />
+		<Unit filename="structures/table/sorting/insert_sort.h" />
+		<Unit filename="structures/table/sorting/merge_sort.h" />
+		<Unit filename="structures/table/sorting/quick_sort.h" />
+		<Unit filename="structures/table/sorting/radix_sort.h" />
+		<Unit filename="structures/table/sorting/select_sort.h" />
+		<Unit filename="structures/table/sorting/shell_sort.h" />
+		<Unit filename="structures/table/sorting/shuffle.h" />
+		<Unit filename="structures/table/sorting/sort.cpp" />
+		<Unit filename="structures/table/sorting/sort.h" />
+		<Unit filename="structures/table/table.h">
+			<Option compile="1" />
+		</Unit>
+		<Unit filename="structures/table/unsorted_sequence_table.h">
+			<Option compile="1" />
+		</Unit>
+		<Unit filename="structures/types.h">
+			<Option compile="1" />
+		</Unit>
+		<Unit filename="structures/utils.cpp" />
+		<Unit filename="structures/utils.h">
+			<Option compile="1" />
+		</Unit>
+		<Unit filename="structures/vector/vector.cpp" />
+		<Unit filename="structures/vector/vector.h">
+			<Option compile="1" />
+		</Unit>
+		<Unit filename="workers/data_loader.h">
+			<Option compile="1" />
+		</Unit>
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>
