@@ -5,6 +5,6 @@ template <typename ObjectType, typename ResultType>
 class Criterion
 {
 public:
-    virtual ResultType evaluate(const ObjectType& object);
+    virtual ResultType evaluate(ObjectType& object);
 };
 }

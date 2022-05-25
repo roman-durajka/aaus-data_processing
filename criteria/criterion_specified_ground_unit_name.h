@@ -4,13 +4,13 @@
 namespace criteria
 {
 /// <summary> Kriterium pre nazvy. </summary>
-class CriterionSpecifiedGroundUnitName : public CriterionSpecifiedGroundUnit<std::wstring>
+class CriterionSpecifiedGroundUnitName : public CriterionSpecifiedGroundUnit<std::string>
 {
 public:
-    std::wstring evaluate(const ground_units::SpecifiedGroundUnit& unit) override;
+    std::string evaluate(ground_units::SpecifiedGroundUnit& unit) override;
 };
 
-inline std::wstring CriterionSpecifiedGroundUnitName::evaluate(const ground_units::SpecifiedGroundUnit& unit)
+inline std::string CriterionSpecifiedGroundUnitName::evaluate(ground_units::SpecifiedGroundUnit& unit)
 {
     return unit.getName();
 }

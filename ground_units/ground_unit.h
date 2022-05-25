@@ -2,6 +2,12 @@
 
 #include <string>
 
+#include "../attributes/identification.h"
+#include "../attributes/tag.h"
+
+#include "../structures/table/sorted_sequence_table.h"
+
+
 //obec, kraj, okres, stat
 enum Type {village, region, district, state};
 
@@ -11,46 +17,60 @@ namespace ground_units
 class GroundUnit
 {
 public:
-    GroundUnit(Type type, std::wstring name);
-    GroundUnit(Type type, std::wstring name, std::string code, std::string note);
-    const Type& getType() const { return type_; }
-    const std::wstring& getName() const { return name_; }
-    std::string getGroundId() const;
-    std::string getGroundAbb() const;
-    bool isAffiliated(const GroundUnit& otherUnit) const;
-private:
+    GroundUnit();
+    GroundUnit(const GroundUnit& other);
+    GroundUnit(Type type, identifications::Identification* id, identifications::Tag* tag);
+    Type getType() { return type_; }
+    std::string getName() { return ID_->getOfficialTitle(); }
+    std::string getGroundId();
+    std::string getGroundAbb();
+    //bool isAffiliated(const GroundUnit& otherUnit) const;
+
+    /*
+    Ziska kod, ktory sluzi na porovnanie s nizsimi uzemnymi jednotkami.
+    */
+    virtual std::string getDownComparisonID() = 0;
+
+    /*
+    Ziska kod, ktory sluzi na porovnanie s vyssimi uzemnymi jednotkami.
+    */
+    virtual std::string getUpComparisonID() = 0;
+    virtual void addInferiorGroundUnit(ground_units::GroundUnit* groundUnitToAdd) = 0;
+    virtual void addSuperiorGroundUnit(ground_units::GroundUnit* superiorGroundUnit) = 0;
+
+    //operators
+    bool operator == (const GroundUnit& other) { return ID_ == other.ID_; }
+    bool operator != (const GroundUnit& other) { return ID_ != other.ID_; }
+protected:
     Type type_;
-    std::wstring name_;
-    std::string code_;
-    std::string note_;
+    identifications::Identification* ID_;
+    identifications::Tag* tag_;
 };
 
-inline GroundUnit::GroundUnit(Type type, std::wstring name) :
-    type_(type),
-    name_(name),
-    code_(""),
-    note_("")
+inline GroundUnit::GroundUnit(const GroundUnit& other) :
+    type_(other.type_),
+    tag_(other.tag_),
+    ID_(other.ID_)
 {
 }
 
-inline GroundUnit::GroundUnit(Type type, std::wstring name, std::string code, std::string note) :
+inline GroundUnit::GroundUnit(Type type, identifications::Identification* id, identifications::Tag* tag) :
     type_(type),
-    name_(name),
-    code_(code),
-    note_(note)
+    tag_(tag),
+    ID_(id)
 {
 }
 
-inline std::string GroundUnit::getGroundId() const
+inline std::string GroundUnit::getGroundId()
 {
     std::string idString;
     switch(type_)
     {
         case village: case district:
-            idString = code_.substr(3, 3);
+            idString = tag_->getCode().substr(3, 3);
             break;
         case region:
-            idString = code_.substr(7, 3);
+            idString = tag_->getCode().substr(7, 3);
             break;
         case state:
             break;
@@ -59,14 +79,15 @@ inline std::string GroundUnit::getGroundId() const
     return idString;
 }
 
-inline std::string GroundUnit::getGroundAbb() const
+inline std::string GroundUnit::getGroundAbb()
 {
     std::string codeString;
-    codeString = code_.substr(0, 2);
+    codeString = tag_->getCode().substr(0, 2);
 
     return codeString;
 }
 
+/*
 inline bool GroundUnit::isAffiliated(const GroundUnit& otherUnit) const
 {
     if (getGroundAbb() != otherUnit.getGroundAbb())
@@ -83,6 +104,7 @@ inline bool GroundUnit::isAffiliated(const GroundUnit& otherUnit) const
 
     return true;
 }
+*/
 }
 
 

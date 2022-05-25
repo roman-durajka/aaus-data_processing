@@ -7,10 +7,10 @@ namespace criteria
 class CriterionSpecifiedGroundUnitType : public CriterionSpecifiedGroundUnit<Type>
 {
 public:
-    Type evaluate(const ground_units::SpecifiedGroundUnit& unit) override;
+    Type evaluate(ground_units::SpecifiedGroundUnit& unit) override;
 };
 
-inline Type CriterionSpecifiedGroundUnitType::evaluate(const ground_units::SpecifiedGroundUnit& unit)
+inline Type CriterionSpecifiedGroundUnitType::evaluate(ground_units::SpecifiedGroundUnit& unit)
 {
     return unit.getType();
 }

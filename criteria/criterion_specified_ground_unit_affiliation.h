@@ -8,19 +8,20 @@ namespace criteria
 class CriterionSpecifiedGroundUnitAffiliation : public CriterionSpecifiedGroundUnit<bool>
 {
 public:
-    CriterionSpecifiedGroundUnitAffiliation(const ground_units::SuperiorGroundUnit& unit);
-    bool evaluate(const ground_units::SpecifiedGroundUnit& unit) override;
+    CriterionSpecifiedGroundUnitAffiliation(ground_units::SuperiorGroundUnit& unit);
+    bool evaluate(ground_units::SpecifiedGroundUnit& unit) override;
 private:
-    const ground_units::SuperiorGroundUnit& superiorUnit_;
+    ground_units::SuperiorGroundUnit& superiorUnit_;
 };
 
-CriterionSpecifiedGroundUnitAffiliation::CriterionSpecifiedGroundUnitAffiliation(const ground_units::SuperiorGroundUnit& unit) :
+CriterionSpecifiedGroundUnitAffiliation::CriterionSpecifiedGroundUnitAffiliation(ground_units::SuperiorGroundUnit& unit) :
 superiorUnit_(unit)
 {
 }
 
-inline bool CriterionSpecifiedGroundUnitAffiliation::evaluate(const ground_units::SpecifiedGroundUnit& unit)
+inline bool CriterionSpecifiedGroundUnitAffiliation::evaluate(ground_units::SpecifiedGroundUnit& unit)
 {
-    return unit.isAffiliated(superiorUnit_);
+    //return unit.isAffiliated(superiorUnit_);
+    return true;
 }
 }
