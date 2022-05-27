@@ -4,6 +4,7 @@
 
 #include "../attributes/identification.h"
 #include "../attributes/tag.h"
+#include "../attributes/education.h"
 
 #include "../structures/table/sorted_sequence_table.h"
 
@@ -18,12 +19,11 @@ class GroundUnit
 {
 public:
     GroundUnit();
+    ~GroundUnit();
     GroundUnit(const GroundUnit& other);
-    GroundUnit(Type type, identifications::Identification* id, identifications::Tag* tag);
-    Type getType() { return type_; }
-    std::string getName() { return ID_->getOfficialTitle(); }
-    std::string getGroundId();
-    std::string getGroundAbb();
+    GroundUnit(Type type, identifications::Identification* id, identifications::Tag* tag, identifications::Education* newEducation);
+    Type getType() const { return type_; }
+    std::string getName() const { return ID_->getOfficialTitle(); }
     //bool isAffiliated(const GroundUnit& otherUnit) const;
 
     /*
@@ -37,6 +37,9 @@ public:
     virtual std::string getUpComparisonID() = 0;
     virtual void addInferiorGroundUnit(ground_units::GroundUnit* groundUnitToAdd) = 0;
     virtual void addSuperiorGroundUnit(ground_units::GroundUnit* superiorGroundUnit) = 0;
+    virtual ground_units::GroundUnit* getSuperiorGroundUnit() const = 0;
+    virtual identifications::Education& getEducation() const = 0;
+    virtual void addEducationValues(identifications::Education& otherEducation) const = 0;
 
     //operators
     bool operator == (const GroundUnit& other) { return ID_ == other.ID_; }
@@ -45,46 +48,33 @@ protected:
     Type type_;
     identifications::Identification* ID_;
     identifications::Tag* tag_;
+    identifications::Education* education_;
 };
 
 inline GroundUnit::GroundUnit(const GroundUnit& other) :
     type_(other.type_),
     tag_(other.tag_),
-    ID_(other.ID_)
+    ID_(other.ID_),
+    education_(other.education_)
 {
 }
 
-inline GroundUnit::GroundUnit(Type type, identifications::Identification* id, identifications::Tag* tag) :
+inline GroundUnit::GroundUnit(Type type, identifications::Identification* id, identifications::Tag* tag, identifications::Education* newEducation) :
     type_(type),
     tag_(tag),
-    ID_(id)
+    ID_(id),
+    education_(newEducation)
 {
 }
 
-inline std::string GroundUnit::getGroundId()
+inline GroundUnit::~GroundUnit()
 {
-    std::string idString;
-    switch(type_)
-    {
-        case village: case district:
-            idString = tag_->getCode().substr(3, 3);
-            break;
-        case region:
-            idString = tag_->getCode().substr(7, 3);
-            break;
-        case state:
-            break;
-    }
-
-    return idString;
-}
-
-inline std::string GroundUnit::getGroundAbb()
-{
-    std::string codeString;
-    codeString = tag_->getCode().substr(0, 2);
-
-    return codeString;
+    delete ID_;
+    ID_ = nullptr;
+    delete tag_;
+    tag_ = nullptr;
+    delete education_;
+    education_ = nullptr;
 }
 
 /*

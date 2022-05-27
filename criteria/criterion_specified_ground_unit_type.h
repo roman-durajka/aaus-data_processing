@@ -1,4 +1,4 @@
-#include "criterion_specified_ground_unit.h"
+#include "criterion_ground_unit.h"
 
 
 namespace criteria

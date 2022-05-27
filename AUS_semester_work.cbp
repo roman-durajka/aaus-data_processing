@@ -44,19 +44,19 @@
 		<Unit filename="criteria/criterion.h">
 			<Option compile="1" />
 		</Unit>
-		<Unit filename="criteria/criterion_specified_ground_unit.h">
+		<Unit filename="criteria/criterion_ground_unit.h">
 			<Option compile="1" />
 		</Unit>
-		<Unit filename="criteria/criterion_specified_ground_unit_affiliation.h">
+		<Unit filename="criteria/criterion_ground_unit_education.h" />
+		<Unit filename="criteria/criterion_ground_unit_name.h">
 			<Option compile="1" />
 		</Unit>
+		<Unit filename="criteria/criterion_ground_unit_type.h" />
+		<Unit filename="criteria/criterion_specified_ground_unit.h" />
+		<Unit filename="criteria/criterion_specified_ground_unit_affiliation.h" />
 		<Unit filename="criteria/criterion_specified_ground_unit_educated_count.h" />
-		<Unit filename="criteria/criterion_specified_ground_unit_name.h">
-			<Option compile="1" />
-		</Unit>
-		<Unit filename="criteria/criterion_specified_ground_unit_type.h">
-			<Option compile="1" />
-		</Unit>
+		<Unit filename="criteria/criterion_specified_ground_unit_name.h" />
+		<Unit filename="criteria/criterion_specified_ground_unit_type.h" />
 		<Unit filename="ground_units/district.h">
 			<Option compile="1" />
 		</Unit>
@@ -145,6 +145,12 @@
 			<Option compile="1" />
 		</Unit>
 		<Unit filename="workers/data_loader.h">
+			<Option compile="1" />
+		</Unit>
+		<Unit filename="workers/point_search.h">
+			<Option compile="1" />
+		</Unit>
+		<Unit filename="workers/startup_dialog.h">
 			<Option compile="1" />
 		</Unit>
 		<Extensions />
