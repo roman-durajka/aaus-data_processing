@@ -8,6 +8,7 @@ template <typename ObjectType, typename ResultType>
 class Criterion
 {
 public:
+    virtual ~Criterion() = default;
     virtual ResultType evaluate(const ObjectType& object) = 0;
 };
 }

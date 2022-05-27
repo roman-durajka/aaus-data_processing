@@ -5,6 +5,7 @@
 #include "workers/data_loader.h"
 #include "workers/startup_dialog.h"
 #include "workers/point_search.h"
+#include "workers/filtering.h"
 
 using namespace std;
 
@@ -38,9 +39,18 @@ int main()
     switch (choice)
     {
         case 1:
+        {
             workers::PointSearch* pointSearch = new workers::PointSearch(*villages, *districts, *regions);
             pointSearch->process();
             delete pointSearch;
+            break;
+        }
+        case 2:
+        {
+            workers::Filtering filtering = workers::Filtering(*states, *regions, *districts, *villages, new workers::StartupDialog());
+            filtering.process();
+            break;
+        }
     }
 
     delete states;

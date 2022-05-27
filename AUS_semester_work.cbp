@@ -47,16 +47,51 @@
 		<Unit filename="criteria/criterion_ground_unit.h">
 			<Option compile="1" />
 		</Unit>
-		<Unit filename="criteria/criterion_ground_unit_education.h" />
+		<Unit filename="criteria/criterion_ground_unit_affiliation.h">
+			<Option compile="1" />
+		</Unit>
+		<Unit filename="criteria/criterion_ground_unit_education.h">
+			<Option compile="1" />
+		</Unit>
+		<Unit filename="criteria/criterion_ground_unit_education_share.h">
+			<Option compile="1" />
+		</Unit>
 		<Unit filename="criteria/criterion_ground_unit_name.h">
 			<Option compile="1" />
 		</Unit>
-		<Unit filename="criteria/criterion_ground_unit_type.h" />
-		<Unit filename="criteria/criterion_specified_ground_unit.h" />
-		<Unit filename="criteria/criterion_specified_ground_unit_affiliation.h" />
-		<Unit filename="criteria/criterion_specified_ground_unit_educated_count.h" />
-		<Unit filename="criteria/criterion_specified_ground_unit_name.h" />
-		<Unit filename="criteria/criterion_specified_ground_unit_type.h" />
+		<Unit filename="criteria/criterion_ground_unit_type.h">
+			<Option compile="1" />
+		</Unit>
+		<Unit filename="filters/composite_filter.h">
+			<Option compile="1" />
+		</Unit>
+		<Unit filename="filters/composite_filter_and.h">
+			<Option compile="1" />
+		</Unit>
+		<Unit filename="filters/filter.h">
+			<Option compile="1" />
+		</Unit>
+		<Unit filename="filters/filter_ground_unit_affiliation.h">
+			<Option compile="1" />
+		</Unit>
+		<Unit filename="filters/filter_ground_unit_education.h">
+			<Option compile="1" />
+		</Unit>
+		<Unit filename="filters/filter_ground_unit_education_share.h">
+			<Option compile="1" />
+		</Unit>
+		<Unit filename="filters/filter_ground_unit_type.h">
+			<Option compile="1" />
+		</Unit>
+		<Unit filename="filters/filter_with_criterion.h">
+			<Option compile="1" />
+		</Unit>
+		<Unit filename="filters/filter_with_criterion_interval.h">
+			<Option compile="1" />
+		</Unit>
+		<Unit filename="filters/filter_with_criterion_value.h">
+			<Option compile="1" />
+		</Unit>
 		<Unit filename="ground_units/district.h">
 			<Option compile="1" />
 		</Unit>
@@ -145,6 +180,9 @@
 			<Option compile="1" />
 		</Unit>
 		<Unit filename="workers/data_loader.h">
+			<Option compile="1" />
+		</Unit>
+		<Unit filename="workers/filtering.h">
 			<Option compile="1" />
 		</Unit>
 		<Unit filename="workers/point_search.h">

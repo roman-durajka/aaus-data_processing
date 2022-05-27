@@ -21,8 +21,6 @@ public:
     District(ground_units::District& other);
 
     void addInferiorGroundUnit(ground_units::GroundUnit* groundUnitToAdd) override;
-    void addSuperiorGroundUnit(ground_units::GroundUnit* superiorGroundUnit) override { superiorGroundUnit_ = superiorGroundUnit; }
-    ground_units::GroundUnit* getSuperiorGroundUnit() const override { return superiorGroundUnit_; }
     identifications::Education& getEducation() const override { return *education_; };
     void addEducationValues(identifications::Education& otherEducation) const { education_->addEducationValues(otherEducation); }
 

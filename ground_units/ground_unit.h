@@ -9,10 +9,6 @@
 #include "../structures/table/sorted_sequence_table.h"
 
 
-//obec, kraj, okres, stat
-enum Type {village, region, district, state};
-
-
 namespace ground_units
 {
 class GroundUnit
@@ -24,7 +20,9 @@ public:
     GroundUnit(Type type, identifications::Identification* id, identifications::Tag* tag, identifications::Education* newEducation);
     Type getType() const { return type_; }
     std::string getName() const { return ID_->getOfficialTitle(); }
-    //bool isAffiliated(const GroundUnit& otherUnit) const;
+
+    ground_units::GroundUnit* getSuperiorGroundUnit() const;
+    void addSuperiorGroundUnit(ground_units::GroundUnit* unitToAdd);
 
     /*
     Ziska kod, ktory sluzi na porovnanie s nizsimi uzemnymi jednotkami.
@@ -36,8 +34,6 @@ public:
     */
     virtual std::string getUpComparisonID() = 0;
     virtual void addInferiorGroundUnit(ground_units::GroundUnit* groundUnitToAdd) = 0;
-    virtual void addSuperiorGroundUnit(ground_units::GroundUnit* superiorGroundUnit) = 0;
-    virtual ground_units::GroundUnit* getSuperiorGroundUnit() const = 0;
     virtual identifications::Education& getEducation() const = 0;
     virtual void addEducationValues(identifications::Education& otherEducation) const = 0;
 
@@ -49,13 +45,16 @@ protected:
     identifications::Identification* ID_;
     identifications::Tag* tag_;
     identifications::Education* education_;
+
+    ground_units::GroundUnit* superiorGroundUnit_;
 };
 
 inline GroundUnit::GroundUnit(const GroundUnit& other) :
     type_(other.type_),
     tag_(other.tag_),
     ID_(other.ID_),
-    education_(other.education_)
+    education_(other.education_),
+    superiorGroundUnit_(nullptr)
 {
 }
 
@@ -63,7 +62,8 @@ inline GroundUnit::GroundUnit(Type type, identifications::Identification* id, id
     type_(type),
     tag_(tag),
     ID_(id),
-    education_(newEducation)
+    education_(newEducation),
+    superiorGroundUnit_(nullptr)
 {
 }
 
@@ -77,24 +77,19 @@ inline GroundUnit::~GroundUnit()
     education_ = nullptr;
 }
 
-/*
-inline bool GroundUnit::isAffiliated(const GroundUnit& otherUnit) const
+inline void GroundUnit::addSuperiorGroundUnit(ground_units::GroundUnit* unitToAdd)
 {
-    if (getGroundAbb() != otherUnit.getGroundAbb())
-    {
-        return false;
-    }
-    if (otherUnit.getGroundId() != "")
-    {
-        if (getGroundId() != otherUnit.getGroundId())
-        {
-            return false;
-        }
-    }
-
-    return true;
+    superiorGroundUnit_ = unitToAdd;
 }
-*/
+
+inline ground_units::GroundUnit* GroundUnit::getSuperiorGroundUnit() const
+{
+    if (superiorGroundUnit_ != nullptr)
+    {
+        return superiorGroundUnit_;
+    }
+    throw std::logic_error("This ground unit does not have superior unit!");
+}
 }
 
 
