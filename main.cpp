@@ -6,8 +6,9 @@
 #include "workers/startup_dialog.h"
 #include "workers/point_search.h"
 #include "workers/filtering.h"
+#include "workers/sorting.h"
 
-using namespace std;
+
 
 int main()
 {
@@ -46,8 +47,14 @@ int main()
             }
             case 2:
             {
-                workers::Filtering filtering = workers::Filtering(*states, *regions, *districts, *villages, new workers::StartupDialog());
+                workers::Filtering filtering = workers::Filtering(*states, *regions, *districts, *villages);
                 filtering.process();
+                continue;
+            }
+            case 3:
+            {
+                workers::Sorting sorting = workers::Sorting(*states, *regions, *districts, *villages);
+                sorting.process();
                 continue;
             }
             case 0:
@@ -56,11 +63,31 @@ int main()
         break;
     }
 
+    for (auto state : *states) {
+        delete state->accessData();
+    }
     delete states;
+
+    for (auto region : *regions) {
+        delete region->accessData();
+    }
     delete regions;
+
+    for (auto district : *districts) {
+        delete district->accessData();
+    }
     delete districts;
+
+    for (auto educationItem : *education) {
+        delete educationItem->accessData();
+    }
     delete education;
+
+    for (auto village: *villages) {
+        delete village->accessData();
+    }
     delete villages;
+
 
     return 0;
 }

@@ -19,7 +19,6 @@ public:
     Village(ground_units::Village& other);
 
     identifications::Education& getEducation() { return *education_; }
-    void addInferiorGroundUnit(ground_units::GroundUnit* groundUnitToAdd) override;
     identifications::Education& getEducation() const override { return *education_; };
     void addEducationValues(identifications::Education& otherEducation) const { education_->addEducationValues(otherEducation); }
 
@@ -61,10 +60,5 @@ inline std::string Village::getDownComparisonID()
 inline std::string Village::getUpComparisonID()
 {
     return GroundUnit::tag_->getCode().substr(0, 6);
-}
-
-inline void Village::addInferiorGroundUnit(ground_units::GroundUnit* groundUnitToAdd)
-{
-    throw std::logic_error("Village does not have inferior ground unit!");
 }
 }

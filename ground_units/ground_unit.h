@@ -33,7 +33,6 @@ public:
     Ziska kod, ktory sluzi na porovnanie s vyssimi uzemnymi jednotkami.
     */
     virtual std::string getUpComparisonID() = 0;
-    virtual void addInferiorGroundUnit(ground_units::GroundUnit* groundUnitToAdd) = 0;
     virtual identifications::Education& getEducation() const = 0;
     virtual void addEducationValues(identifications::Education& otherEducation) const = 0;
 

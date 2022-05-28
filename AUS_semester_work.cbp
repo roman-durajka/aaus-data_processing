@@ -158,10 +158,14 @@
 		<Unit filename="structures/table/sorting/quick_sort.h" />
 		<Unit filename="structures/table/sorting/radix_sort.h" />
 		<Unit filename="structures/table/sorting/select_sort.h" />
-		<Unit filename="structures/table/sorting/shell_sort.h" />
+		<Unit filename="structures/table/sorting/shell_sort.h">
+			<Option compile="1" />
+		</Unit>
 		<Unit filename="structures/table/sorting/shuffle.h" />
 		<Unit filename="structures/table/sorting/sort.cpp" />
-		<Unit filename="structures/table/sorting/sort.h" />
+		<Unit filename="structures/table/sorting/sort.h">
+			<Option compile="1" />
+		</Unit>
 		<Unit filename="structures/table/table.h">
 			<Option compile="1" />
 		</Unit>
@@ -186,6 +190,9 @@
 			<Option compile="1" />
 		</Unit>
 		<Unit filename="workers/point_search.h">
+			<Option compile="1" />
+		</Unit>
+		<Unit filename="workers/sorting.h">
 			<Option compile="1" />
 		</Unit>
 		<Unit filename="workers/startup_dialog.h">
