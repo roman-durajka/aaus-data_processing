@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1653683419 source:/home/roman/CodeBlocks_projects/AUS_semester_work/main.cpp
+1653733844 source:/home/roman/CodeBlocks_projects/AUS_semester_work/main.cpp
 	<iostream>
 	"workers/data_loader.h"
 	"workers/startup_dialog.h"
@@ -245,11 +245,11 @@
 	"../attributes/tag.h"
 	"../attributes/education.h"
 
-1653689089 source:/home/roman/CodeBlocks_projects/AUS_semester_work/attributes/education.h
+1653729932 source:/home/roman/CodeBlocks_projects/AUS_semester_work/attributes/education.h
 	"../workers/startup_dialog.h"
 	<string>
 
-1653689089 /home/roman/CodeBlocks_projects/AUS_semester_work/attributes/education.h
+1653729932 /home/roman/CodeBlocks_projects/AUS_semester_work/attributes/education.h
 	"../workers/startup_dialog.h"
 	<string>
 
@@ -302,7 +302,7 @@
 	"../criteria/criterion_ground_unit_type.h"
 	"../criteria/criterion_ground_unit_education.h"
 
-1653663985 /home/roman/CodeBlocks_projects/AUS_semester_work/workers/startup_dialog.h
+1653734816 /home/roman/CodeBlocks_projects/AUS_semester_work/workers/startup_dialog.h
 	<iostream>
 	<stdexcept>
 	<limits>
@@ -317,7 +317,7 @@
 	"../criteria/criterion_ground_unit_type.h"
 	"../criteria/criterion_ground_unit_education.h"
 
-1653663985 source:/home/roman/CodeBlocks_projects/AUS_semester_work/workers/startup_dialog.h
+1653734523 source:/home/roman/CodeBlocks_projects/AUS_semester_work/workers/startup_dialog.h
 	<iostream>
 	<stdexcept>
 	<limits>
@@ -342,7 +342,7 @@
 1653684366 source:/home/roman/CodeBlocks_projects/AUS_semester_work/criteria/criterion_ground_unit_affiliation.h
 	"criterion_ground_unit.h"
 
-1653643989 source:/home/roman/CodeBlocks_projects/AUS_semester_work/criteria/criterion_ground_unit_education_share.h
+1653730698 source:/home/roman/CodeBlocks_projects/AUS_semester_work/criteria/criterion_ground_unit_education_share.h
 	"criterion_ground_unit.h"
 	"criterion_ground_unit_education.h"
 	"../attributes/education.h"
@@ -355,7 +355,7 @@
 
 1653686296 /home/roman/CodeBlocks_projects/AUS_semester_work/filters/filter.h
 
-1653687643 source:/home/roman/CodeBlocks_projects/AUS_semester_work/filters/filter_with_criterion_interval.h
+1653690095 source:/home/roman/CodeBlocks_projects/AUS_semester_work/filters/filter_with_criterion_interval.h
 	"../criteria/criterion.h"
 	"filter_with_criterion.h"
 
@@ -376,15 +376,17 @@
 	"../criteria/criterion.h"
 	"filter_with_criterion.h"
 
-1653688522 source:/home/roman/CodeBlocks_projects/AUS_semester_work/filters/composite_filter.h
+1653734679 source:/home/roman/CodeBlocks_projects/AUS_semester_work/filters/composite_filter.h
 	"filter.h"
 	"../structures/list/array_list.h"
+	"../structures/list/double_linked_list.h"
 
-1653689090 source:/home/roman/CodeBlocks_projects/AUS_semester_work/workers/filtering.h
+1653734495 source:/home/roman/CodeBlocks_projects/AUS_semester_work/workers/filtering.h
 	"startup_dialog.h"
 	"../filters/filter_ground_unit_type.h"
 	"../filters/filter_ground_unit_affiliation.h"
 	"../filters/filter_ground_unit_education.h"
+	"../filters/filter_ground_unit_education_share.h"
 	"../filters/composite_filter_and.h"
 	"../filters/filter.h"
 	"../criteria/criterion_ground_unit_name.h"
@@ -394,32 +396,35 @@
 	"../ground_units/ground_unit.h"
 	"../ground_units/state.h"
 	"../structures/table/sorted_sequence_table.h"
+	"../structures/list/array_list.h"
 
 1653680290 /home/roman/CodeBlocks_projects/AUS_semester_work/filters/filter_ground_unit_type.h
 	"filter_with_criterion_value.h"
 	"../ground_units/ground_unit.h"
 	"../criteria/criterion_ground_unit_type.h"
 
-1653677863 source:/home/roman/CodeBlocks_projects/AUS_semester_work/filters/composite_filter_and.h
+1653733521 source:/home/roman/CodeBlocks_projects/AUS_semester_work/filters/composite_filter_and.h
 	"composite_filter.h"
 
-1653688522 /home/roman/CodeBlocks_projects/AUS_semester_work/filters/composite_filter.h
+1653734679 /home/roman/CodeBlocks_projects/AUS_semester_work/filters/composite_filter.h
 	"filter.h"
 	"../structures/list/array_list.h"
+	"../structures/list/double_linked_list.h"
 
-1653677863 /home/roman/CodeBlocks_projects/AUS_semester_work/filters/composite_filter_and.h
+1653733521 /home/roman/CodeBlocks_projects/AUS_semester_work/filters/composite_filter_and.h
 	"composite_filter.h"
 
-1653643989 /home/roman/CodeBlocks_projects/AUS_semester_work/criteria/criterion_ground_unit_education_share.h
+1653730698 /home/roman/CodeBlocks_projects/AUS_semester_work/criteria/criterion_ground_unit_education_share.h
 	"criterion_ground_unit.h"
 	"criterion_ground_unit_education.h"
 	"../attributes/education.h"
 
-1653690095 /home/roman/CodeBlocks_projects/AUS_semester_work/workers/filtering.h
+1653734495 /home/roman/CodeBlocks_projects/AUS_semester_work/workers/filtering.h
 	"startup_dialog.h"
 	"../filters/filter_ground_unit_type.h"
 	"../filters/filter_ground_unit_affiliation.h"
 	"../filters/filter_ground_unit_education.h"
+	"../filters/filter_ground_unit_education_share.h"
 	"../filters/composite_filter_and.h"
 	"../filters/filter.h"
 	"../criteria/criterion_ground_unit_name.h"
@@ -429,6 +434,7 @@
 	"../ground_units/ground_unit.h"
 	"../ground_units/state.h"
 	"../structures/table/sorted_sequence_table.h"
+	"../structures/list/array_list.h"
 
 1651859246 /home/roman/CodeBlocks_projects/AUS_semester_work/structures/list/linked_list.h
 	"list.h"
@@ -472,6 +478,12 @@
 	"../attributes/education.h"
 
 1653689276 source:/home/roman/CodeBlocks_projects/AUS_semester_work/filters/filter_ground_unit_education_share.h
+	"filter_with_criterion_interval.h"
+	"../ground_units/ground_unit.h"
+	"../criteria/criterion_ground_unit_education_share.h"
+	"../attributes/education.h"
+
+1653689276 /home/roman/CodeBlocks_projects/AUS_semester_work/filters/filter_ground_unit_education_share.h
 	"filter_with_criterion_interval.h"
 	"../ground_units/ground_unit.h"
 	"../criteria/criterion_ground_unit_education_share.h"

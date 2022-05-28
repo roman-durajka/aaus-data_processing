@@ -32,25 +32,28 @@ int main()
         stateLoadInferiorGroundUnits(state->accessData(), regions);
     }
 
-    workers::StartupDialog* dialog = new workers::StartupDialog();
-    int choice = dialog->process();
-    delete dialog;
+    while (true) {
+        workers::StartupDialog dialog = workers::StartupDialog();
+        int choice = dialog.process();
 
-    switch (choice)
-    {
-        case 1:
+        switch (choice)
         {
-            workers::PointSearch* pointSearch = new workers::PointSearch(*villages, *districts, *regions);
-            pointSearch->process();
-            delete pointSearch;
-            break;
+            case 1:
+            {
+                workers::PointSearch pointSearch = workers::PointSearch(*villages, *districts, *regions);
+                pointSearch.process();
+                continue;
+            }
+            case 2:
+            {
+                workers::Filtering filtering = workers::Filtering(*states, *regions, *districts, *villages, new workers::StartupDialog());
+                filtering.process();
+                continue;
+            }
+            case 0:
+                break;
         }
-        case 2:
-        {
-            workers::Filtering filtering = workers::Filtering(*states, *regions, *districts, *villages, new workers::StartupDialog());
-            filtering.process();
-            break;
-        }
+        break;
     }
 
     delete states;
